@@ -52,18 +52,6 @@ int main(int argc, const char *argv[]) {
     //加载并编译shaders
     Shader ourShader("../shader_scripts/square.vs",
                      "../shader_scripts/square.fs");
-
-//    float vertices[] = {
-//            // 右上角          //颜色           纹理坐标
-//            0.5f, 0.5f, 0.0f, 1.0, 0.0, 0.0, 1.0f, 1.0f, // 右上
-//            // 右下角          //颜色
-//            0.5f, -0.5f, 0.0f, 0.0, 1.0, 0.0, 1.0f, 0.0f, // 右下
-//            // 左下角          //颜色
-//            -0.5f, -0.5f, 0.0f, 0.0, 0.0, 1.0, 0.0f, 0.0f, // 左下
-//            // 左上角          //颜色
-//            -0.5f, 0.5f, 0.0f, 1.0, 1.0, 0.0, 0.0f, 1.0f // 左上
-//    };
-
     float vertices[] = {
             -0.5f, -0.5f, -0.5f, 0.0f, 0.0f,
             0.5f, -0.5f, -0.5f, 1.0f, 0.0f,
