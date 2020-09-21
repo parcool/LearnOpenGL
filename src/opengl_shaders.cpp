@@ -47,8 +47,8 @@ int main(int argc, const char *argv[]) {
     std::cout << "Maximum nr of vertex attributes supported: " << nrAttributes << std::endl;
 
     //加载并编译shaders
-    Shader ourShader("/Users/parcool/CppWorkspace/LearnOpenGL/shader_scripts/square.vs",
-                     "/Users/parcool/CppWorkspace/LearnOpenGL/shader_scripts/square.fs");
+    Shader ourShader("../shader_scripts/square.vs",
+                     "../shader_scripts/square.fs");
 
     float vertices[] = {
             // 右上角          //颜色           纹理坐标
@@ -113,7 +113,7 @@ int main(int argc, const char *argv[]) {
     int width, height, nrChannels;
     //图片坐标0,0颠倒
     stbi_set_flip_vertically_on_load(true);
-    unsigned char *data = stbi_load("/Users/parcool/CppWorkspace/LearnOpenGL/textures/container.jpg", &width, &height,
+    unsigned char *data = stbi_load("../textures/container.jpg", &width, &height,
                                     &nrChannels, 0);
     if (data) {
         //生成真正的多级渐远纹理
@@ -136,7 +136,7 @@ int main(int argc, const char *argv[]) {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     //加载纹理
-    data = stbi_load("/Users/parcool/CppWorkspace/LearnOpenGL/textures/awesomeface.png", &width, &height, &nrChannels,
+    data = stbi_load("../textures/awesomeface.png", &width, &height, &nrChannels,
                      0);
     if (data) {
         //生成真正的多级渐远纹理
